@@ -128,6 +128,7 @@ header {
   position: absolute;
   list-style: none;
   top: 50px;
+  background-size: 30px;
   left: 0;
   height: calc(100vh - 50px);
   width: 100%;
@@ -142,66 +143,78 @@ header {
     margin-bottom: 25px;
   }
 
-  .card {
-    border-radius: 5px;
-    box-shadow: 2px 5px 10px black;
-    width: 80%;
-    max-width: 600px;
+  .container {
     display: flex;
-    flex-direction: row;
-    background-color: #498afb;
-    color: white;
     margin: 0 auto;
-    text-align: center;
-    padding: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
   }
-
-  .profile-img {
-    border-radius: 50%;
-    border: 5px solid white;
+  
+  img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
   }
-
-  .social-list {
-    display: inline-block;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 10px;
-    width: 25px;
-    margin: 0 auto;
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(22rem, calc(25rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #ECE9E6;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  
   }
-
-  .social-list i {
-    color: white;
+  
+  .card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
   }
-
-  .social-list i:hover {
-    color: white;
-    transition: 0.1s;
-    font-size: 14px;
+  
+  
+  .tag {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
   }
-
-  .profile-position {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 18px;
-    letter-spacing: 3px;
-    margin-bottom: .5em;
+  
+  .tag + .tag {
+    margin-left: .5em;
   }
-
-  .profile-main {
-    text-align: left;
-    margin-left: 2em;
+  
+  .tag-blue {
+    background: #56CCF2;
+  background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+    color: #fafafa;
   }
-
-  .profile-name::after {
-    margin-left: 0;
+  
+  .tag-brown {
+    background: #D1913C;
+  background: linear-gradient(to bottom, #FFD194, #D1913C);
+    color: #fafafa;
+  }
+  
+  .tag-red {
+    background: #cb2d3e;
+  background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+    color: #fafafa;
+  }
+  
+  .card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
   }
 
   footer{
-    position: absolute;
-    bottom: 0;
+    margin-bottom: 0;
     margin-top: 10%;
     left: 0;
     right: 0;
@@ -316,7 +329,6 @@ display: block;
 }
 
 
-
 @media only screen and (max-width: 840px) {
   header {
     background-color: white;
@@ -343,6 +355,7 @@ display: block;
     margin-top: 50px;
     margin-bottom: 25px;
     background-color: #498afb;
+    background-size: 1000px;
     transition: 0.2s;
   }
 
@@ -354,79 +367,6 @@ display: block;
     color: rgb(255, 255, 255);
     font-size: 17px;
     transition: 0.2;
-  }
-
-  .card {
-    box-shadow: 0, 0, 20px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    box-shadow: 2px 5px 10px black;
-    width: 80%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: #498afb;
-    color: white;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2em;
-  }
-
-  .profile-img {
-    border-radius: 50%;
-    border: 5px solid white;
-  }
-
-  .social-list {
-    display: inline-block;
-    justify-content:space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 50px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .social-list i {
-    color: white;
-  }
-
-  .social-list i:hover {
-    color: white;
-    transition: 0.1s;
-    font-size: 18px;
-  }
-
-  .profile-name {
-    font-size: 2rem;
-    margin-left: -25px;
-    padding: 0;
-    text-align: center;
-  }
-
-  .line {
-    display: block;
-    height: 1px;
-    width: 10em;
-    background-color: white;
-    margin: .5em auto .75em;
-  }
-
-  .profile-position {
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 18px;
-    margin-left: -25px;
-    margin-bottom: .5em;
-  }
-
-  .profile-body {
-    font-weight: 300;
-    margin-bottom: 0;
-    text-align: center;
-    margin-left: -25px;
-    font-size: 14px;
   }
 
   .footer-bottom {

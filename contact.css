@@ -142,34 +142,34 @@ header {
     margin-bottom: 25px;
   }
 
-  .card {
-    border-radius: 5px;
-    box-shadow: 2px 5px 10px black;
-    width: 80%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: row;
-    background-color: #498afb;
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
     color: white;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2em;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
-
-  .profile-img {
-    border-radius: 50%;
-    border: 5px solid white;
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
   }
-
-  .social-list {
-    display: inline-block;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 10px;
-    width: 25px;
-    margin: 0 auto;
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
   }
 
   .social-list i {
@@ -354,26 +354,6 @@ display: block;
     color: rgb(255, 255, 255);
     font-size: 17px;
     transition: 0.2;
-  }
-
-  .card {
-    box-shadow: 0, 0, 20px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    box-shadow: 2px 5px 10px black;
-    width: 80%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: #498afb;
-    color: white;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2em;
-  }
-
-  .profile-img {
-    border-radius: 50%;
-    border: 5px solid white;
   }
 
   .social-list {

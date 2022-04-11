@@ -41,20 +41,24 @@
       </div>
     </header>
 <div div="content">
-
-    <div class="profile-main">
-      <h2 class="profile-name">Liam Crowe</h2>
-      <hr class="line">
-      <p class="profile-position">Software Developer</p>
-      <p class="profile-body">Lorem ipsum dolor sit amet consectetur 
-        adipisicing elit. Nulla, molestiae labore? Alias, assumenda. Fugiat 
-        exercitationem nostrum nesciunt atque placeat temporibus. Dolorem 
-        dicta officia, doloribus voluptatibus magnam asperiores ipsum ad 
-        voluptates.</p>
+  <div class="card">
+    <div class="profile-sidebar">
+      <img class="profile-img" src="https://www.scoliosis-rehabilitation.com/mymedia/2016/06/no-face.png" style = "width:125px;" alt="image of myself">
+      <ul>
+        <li class="social-list"><a aria-label="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li class="social-list"><a aria-label="github" href="#"></a><i class="fa-brands fa-github"></i></li>
+        <li class="social-list"><a aria-label="instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
     </div>
-  </div>
 
-</div>
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Message" style="height:200px"></textarea>
+    
+        <button type="submit">Send</button>
+      </form>
+    </div>
 
 <footer>
   <div class="footer-content">
@@ -83,5 +87,25 @@
 </footer>
 
     <script src="index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendEmail() {
+            Email.send({
+            //SecureToken:'602717d4-3e33-48df-8cd9-e3ea3f3638fa',
+            Host: "smtp.mailtrap.io",
+            Username: "a3f7c5df8b4505",
+            Password: "72f0717f054b4d",
+            To : 'liamcrowe2502@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact form enquiry",
+            Body : "Name: " + document.getElementById("name").value
+                    +"<br> Email: " + document.getElementById("email").value
+                    +"<br> Message: " + document.getElementById("message").value
+}).then(
+  message => alert(message)
+);
+        }
+    </script>
   </body>
 </html>
