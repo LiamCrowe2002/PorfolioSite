@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Liam Crowe | Website Porfolio</title>
   </head>
@@ -16,7 +16,7 @@
           <li><a href="index.html">About Me</a></li>
           <li><a href="/products">Resume</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="/about">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <!--
                <li id="login"><a href="/login" >Login</a></li>
           <li id="signup"><a href="/signup">Signup</a></li>
@@ -42,16 +42,9 @@
     </header>
 <div div="content">
   <div class="card">
-    <div class="profile-sidebar">
-      <img class="profile-img" src="https://www.scoliosis-rehabilitation.com/mymedia/2016/06/no-face.png" style = "width:125px;" alt="image of myself">
-      <ul>
-        <li class="social-list"><a aria-label="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li class="social-list"><a aria-label="github" href="#"></a><i class="fa-brands fa-github"></i></li>
-        <li class="social-list"><a aria-label="instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-      </ul>
-    </div>
+    
 
-    <form onsubmit="sendEmail(); reset(); return false;">
+    <form onsubmit="sendEmail(); reset();">
         <input type="text" id="name" placeholder="Name" required>
         <input type="email" id="email" placeholder="Email" required>
         <textarea id="message" placeholder="Message" style="height:200px"></textarea>
@@ -94,7 +87,7 @@
             Email.send({
             //SecureToken:'602717d4-3e33-48df-8cd9-e3ea3f3638fa',
             Host: "smtp.mailtrap.io",
-            Username: "a3f7c5df8b4505",
+            Username: "a3f7c5df8b45055",
             Password: "72f0717f054b4d",
             To : 'liamcrowe2502@gmail.com',
             From : document.getElementById("email").value,

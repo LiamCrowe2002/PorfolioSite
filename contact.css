@@ -152,6 +152,17 @@ header {
     margin-bottom: 16px;
     resize: vertical;
   }
+
+  input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
   
   input[type=submit] {
     background-color: #04AA6D;
@@ -172,14 +183,18 @@ header {
     padding: 20px;
   }
 
-  .social-list i {
+  .card {
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px black;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    background-color: #498afb;
     color: white;
-  }
-
-  .social-list i:hover {
-    color: white;
-    transition: 0.1s;
-    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em;
   }
 
   .profile-position {
@@ -354,27 +369,6 @@ display: block;
     color: rgb(255, 255, 255);
     font-size: 17px;
     transition: 0.2;
-  }
-
-  .social-list {
-    display: inline-block;
-    justify-content:space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 50px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .social-list i {
-    color: white;
-  }
-
-  .social-list i:hover {
-    color: white;
-    transition: 0.1s;
-    font-size: 18px;
   }
 
   .profile-name {
