@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <title>Liam Crowe | Website Porfolio</title>
   </head>
   <body>
@@ -28,7 +30,7 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
         <ul class="mobile-menu">
-            <li class="aboutNav"><a href="/home">About Me</a></li>
+            <li class="aboutNav"><a href="index.html">About Me</a></li>
             <li><a href="/products">Resume</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -44,7 +46,7 @@
   <div class="card">
     
 
-    <form onsubmit="sendEmail(); reset();">
+    <form onsubmit="sendEmail()">
         <input type="text" id="name" placeholder="Name" required>
         <input type="email" id="email" placeholder="Email" required>
         <textarea id="message" placeholder="Message" style="height:200px"></textarea>
@@ -70,34 +72,30 @@
     <p>copyright &copy;2022 | <a href="#">Liam Crowe</a></p>
     <div class="footer-menu">
       <ul class="f-menu">
-        <li class="aboutNav"><a href="/home">About</a></li>
+        <li class="aboutNav"><a href="index.html">About</a></li>
         <li><a href="/products">Resume</a></li>
-        <li><a href="/about">Projects</a></li>
-        <li><a href="/about">Contact</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
      </div>
  </div>
 </footer>
 
     <script src="index.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
     <script>
         function sendEmail() {
-            Email.send({
-            //SecureToken:'602717d4-3e33-48df-8cd9-e3ea3f3638fa',
-            Host: "smtp.mailtrap.io",
-            Username: "a3f7c5df8b45055",
-            Password: "72f0717f054b4d",
-            To : 'liamcrowe2502@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "New Contact form enquiry",
-            Body : "Name: " + document.getElementById("name").value
+          Email.send({
+    SecureToken: "d0048d77-6b85-4822-8337-016df6878f84",
+    To : document.getElementById("email").value,
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "Name: " + document.getElementById("name").value
                     +"<br> Email: " + document.getElementById("email").value
                     +"<br> Message: " + document.getElementById("message").value
 }).then(
   message => alert(message)
 );
+            
         }
     </script>
   </body>
